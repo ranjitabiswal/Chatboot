@@ -1,0 +1,85 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - [moderate]{"entity": "price", "value": "mid"}
+    - low
+    - help
+- intent: restaurant_search
+  examples: |
+    - can you find me [italian](cuisine)  restaurants
+    - [bangalore](location)
+    - can you find me [chinese](cuisine) restaurant
+    - [hyderabad](location)
+    - [Chinese]{"entity": "cuisine", "value": "chinese"}
+    - can you find me [italian](cuisine) restaurant
+    - can you find me [italian](cuisine) restaurant  in [hyderabad](location)
+    - can you book a [italian](cuisine) restaurant
+    - exit
+    - can you book me a [italian](cuisine) restaurant
+    - [bangalorre](location)
+    - can you book an [italian](cuisine) restaurant
+    - can you book an [italian](cuisine) restaurannt
+    - can you book  an [italian](cuisine) restaurant
+    - can you show me list of [italian](cuisine) restaurants
+    - can you find me a restaurant
+    - can you find an [italian](cuisine) restaurant
+    - can you find [italian](cuisine) restaurant
+    - can you find some [italian](cuisine) restaurants
+    - can you find some  [italian](cuisine) restaurants
+    - find me some [italian](cuisine) restaurants
+    - can you find some good restaurants
+    - [American](cuisine)
+    - can you find some [mexican](cuisine) restaurants
+    - can you  find me some restaurants
+    - [Mexican](cuisine)
+    - can you find me some [italian](cuisine) restaurants
+    - can you find me some [chinese](cuisine) restaurants
+    - can you find me good  restaurant
+    - [Italian](cuisine)
+    - can you book some [italian](cuisine) restaurants
+    - can you find some [chinese](cuisine) restaurants
+    - [hyderabad]{"entity": "location", "value": "Hyderabad"}
+    - can you find me some  good restaurants
+    - anywhere in [bangalore](location)
+    - [North Indian](cuisine)
+    - can you find some good  restaurants in [bangalore](location)
+    - [South Indian](cuisine)
+    - can you find good restaurant in [goa](location)
+    - can you find some good restaurants in [goa](location)
+    - [Italian](cuisine)
+- intent: goodbye
+  examples: |
+    - bye
+- intent: reset
+  examples: |
+    - reset
+    - [reset](reset)
+- intent: affirm
+  examples: |
+    - expensive
+    - [expensive](price)
+    - [yes](ask_if_email_needed)
+    - [expensive](price)
+    - [yes](ask_if_email_needed)
+- intent: ask_if_email_needed
+  examples: |
+    - naveen.polamreddi@gmail.com
+    - [naveen.polamreddi@gmail.com](email_id)
+    - [yes](ask_if_email_needed)
+    - naveen.polamreddi@thomsonreuters.com
+    - [naveen.polamreddi@gmail.com](email_id)
+- intent: ask_emailid
+  examples: |
+    - naveen.polamreddi@gmail.com
+    - [naveen.polamreddi@gmail.com](email_id)
+- synonym: mid
+  examples: |
+    - moderate
+- synonym: chinese
+  examples: |
+    - Chinese
+- synonym: Hyderabad
+  examples: |
+    - hyderabad

@@ -1,0 +1,1662 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bangalore
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: hyderabad
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_cuisine
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bangalore
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: italian
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: hyderabad
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - intent: restaurant_search
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalorre
+  - slot_was_set:
+    - location: bangalorre
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'False'
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'False'
+  - action: utter_no_results_found
+  - intent: restaurant_search
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: restaurant_search
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - intent: reset
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bangalore
+  - slot_was_set:
+    - cuisine: italian
+  - slot_was_set:
+    - price: mid
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bangalore
+  - slot_was_set:
+    - cuisine: italian
+  - slot_was_set:
+    - price: mid
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: hyderabad
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: italian
+  - slot_was_set:
+    - price: mid
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+  - action: action_search_restaurants
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - intent: reset
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Toscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - action: utter_ask_emailid
+  - intent: utter_ask_if_email_needed
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing mid\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing mid\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing mid\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing mid\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing mid\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing mid\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing mid\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing mid\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing mid\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing mid\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing mid\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing mid\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing mid\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing mid\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing mid\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing mid\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing mid\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing mid\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing mid\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing mid\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+  - action: utter_ask_price
+  - intent: affirm
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing expensive\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing expensive\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing expensive\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing expensive\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: American
+  - slot_was_set:
+    - cuisine: American
+  - action: action_search_restaurants
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: American
+  - slot_was_set:
+    - cuisine: American
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Truffles, in 28, 4th B Cross, Koramangala 5th Block, Bangalore has been rated 4.8 Costing expensive\nBurma Burma, in 607, Ground Floor, 12th Main, Hal 2nd Stage, Indiranagar, Bangalore has been rated 4.7 Costing expensive\nWindmills Craftworks, in 331, EPIP Area, Road 5B, Near KTPO, Whitefield, Bangalore has been rated 4.7 Costing expensive\nCommuniti, in 67 & 68, Brigade Solitaire, Opposite Advaith Hyundai, Residency Road, Bangalore has been rated 4.6 Costing expensive\nBombay Brasserie, in 2989/B, 12th Main Road, HAL 2nd Stage, Indiranagar, Bangalore has been rated 4.6 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_search_restaurants
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Mexican
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Truffles, in 28, 4th B Cross, Koramangala 5th Block, Bangalore has been rated 4.8 Costing expensive\nBurma Burma, in 607, Ground Floor, 12th Main, Hal 2nd Stage, Indiranagar, Bangalore has been rated 4.7 Costing expensive\nWindmills Craftworks, in 331, EPIP Area, Road 5B, Near KTPO, Whitefield, Bangalore has been rated 4.7 Costing expensive\nCommuniti, in 67 & 68, Brigade Solitaire, Opposite Advaith Hyundai, Residency Road, Bangalore has been rated 4.6 Costing expensive\nBombay Brasserie, in 2989/B, 12th Main Road, HAL 2nd Stage, Indiranagar, Bangalore has been rated 4.6 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: email_needed
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing mid\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing mid\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing mid\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing mid\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "The Fatty Bao - Asian Gastro Bar, in 610, 3rd Floor, 12th Main, Off 80 Feet Road, Indiranagar, Bangalore has been rated 4.5 Costing mid\nChina Pearl, in 53/1, 5th Cross, Koramangala 6th Block, Bangalore has been rated 4.5 Costing mid\nHigh Ultra Lounge, in 26/1, 31st Floor, Dr. Rajkumar Road, World Trade Centre, Brigade Gateway Campus, Malleshwaram, Bangalore has been rated 4.3 Costing mid\nYauatcha, in Level 5, 1 MG Lido Mall, MG Road, Bangalore has been rated 4.3 Costing mid\nMamagoto, in 949, 12th Main, Ground Floor, Off 100 Feet Road, Indiranagar, Bangalore has been rated 4.3 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Truffles, in 28, 4th B Cross, Koramangala 5th Block, Bangalore has been rated 4.8 Costing expensive\nBurma Burma, in 607, Ground Floor, 12th Main, Hal 2nd Stage, Indiranagar, Bangalore has been rated 4.7 Costing expensive\nCommuniti, in 67 & 68, Brigade Solitaire, Opposite Advaith Hyundai, Residency Road, Bangalore has been rated 4.6 Costing expensive\nBombay Brasserie, in 2989/B, 12th Main Road, HAL 2nd Stage, Indiranagar, Bangalore has been rated 4.6 Costing expensive\nThe London Curry House - The Royale Senate Hotel, in 19/3, Kumara Krupa Road, Race Course Road, Bangalore has been rated 4.5 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing expensive\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing expensive\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing expensive\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing expensive\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing mid\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing mid\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing mid\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing mid\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: greet
+  - action: utter_greet
+  - intent: reset
+  - intent: reset
+    entities:
+    - reset: reset
+  - intent: greet
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing expensive\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing expensive\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing expensive\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing expensive\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing expensive\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing expensive\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing expensive\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing expensive\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Hyderabad
+  - slot_was_set:
+    - location: Hyderabad
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+  - action: utter_ask_price
+  - intent: greet
+  - action: utter_greet
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "The Fatty Bao - Asian Gastro Bar, in 610, 3rd Floor, 12th Main, Off 80 Feet Road, Indiranagar, Bangalore has been rated 4.5 Costing expensive\nChina Pearl, in 53/1, 5th Cross, Koramangala 6th Block, Bangalore has been rated 4.5 Costing expensive\nHigh Ultra Lounge, in 26/1, 31st Floor, Dr. Rajkumar Road, World Trade Centre, Brigade Gateway Campus, Malleshwaram, Bangalore has been rated 4.3 Costing expensive\nYauatcha, in Level 5, 1 MG Lido Mall, MG Road, Bangalore has been rated 4.3 Costing expensive\nMamagoto, in 949, 12th Main, Ground Floor, Off 100 Feet Road, Indiranagar, Bangalore has been rated 4.3 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: reset
+    entities:
+    - reset: reset
+  - action: action_slot_reset
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Wolf'ish, in 1A, Church Street, Bangalore has been rated 4.1 Costing mid\nTwo Friends Cauldron, in 39, 15th Cross, 4th Phase, Beside HDFC Bank, JP Nagar, Bangalore has been rated 4.0 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: reset
+    entities:
+    - reset: reset
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing expensive\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing expensive\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing expensive\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing expensive\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: reset
+    entities:
+    - reset: reset
+  - action: action_slot_reset
+  - slot_was_set:
+    - location: bangalore
+  - slot_was_set:
+    - cuisine: italian
+  - slot_was_set:
+    - price: expensive
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Smoke House Deli, in 52/ 53, Ground Floor, Lavelle Road, Bangalore has been rated 4.6 Costing expensive\nFenny's Lounge And Kitchen, in 115, 3rd Floor, Opposite Raheja Arcade, Koramangala 7th Block, Bangalore has been rated 4.6 Costing expensive\nOlive Bar And Kitchen, in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6 Costing expensive\nToit, in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.5 Costing expensive\nToscano, in 3rd Floor, VR Mall, Whitefield Main Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5 Costing expensive\n"
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Hyderabad
+  - slot_was_set:
+    - location: Hyderabad
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Flying Spaghetti Monster, in Plot 624-B, Road 35, Near Neerus Emporio, Jubilee Hills, Hyderabad has been rated 4.4 Costing expensive\nLittle Italy, in 550F, 3rd Floor, Road 92, Near Apollo Hospital, Film Nagar, Hyderabad has been rated 4.4 Costing expensive\nLittle Italy, in 3rd Floor, BK Towers, Huda Techno Enclave, Near Cyber Towers, Sector 2, Hitech City, Hyderabad has been rated 4.3 Costing expensive\nThinespo, in Plot 2-041, Medchal Road, North NCL Kompally, Beside Excellency Gardens, Kompally, Hyderabad has been rated 4.3 Costing expensive\nPrego - The Westin, in Raheja IT Park, HUDA Techno Enclave, Hitech City, Hyderabad has been rated 4.3 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+  - slot_was_set:
+    - cuisine: italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_price
+  - intent: greet
+  - action: utter_ask_price
+  - intent: greet
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Wolf'ish, in 1A, Church Street, Bangalore has been rated 4.1 Costing mid\nTwo Friends Cauldron, in 39, 15th Cross, 4th Phase, Beside HDFC Bank, JP Nagar, Bangalore has been rated 4.0 Costing mid\n"
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "The Hole In The Wall Cafe, in 4, 8th Main Road, Koramangala 4th Block, Bangalore has been rated 4.4 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_emailid
+  - action: utter_ask_if_email_needed
+  - intent: ask_if_email_needed
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: North Indian
+  - slot_was_set:
+    - cuisine: North Indian
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "Truffles, in 28, 4th B Cross, Koramangala 5th Block, Bangalore has been rated 4.8 Costing expensive\nBurma Burma, in 607, Ground Floor, 12th Main, Hal 2nd Stage, Indiranagar, Bangalore has been rated 4.7 Costing expensive\nCommuniti, in 67 & 68, Brigade Solitaire, Opposite Advaith Hyundai, Residency Road, Bangalore has been rated 4.6 Costing expensive\nBombay Brasserie, in 2989/B, 12th Main Road, HAL 2nd Stage, Indiranagar, Bangalore has been rated 4.6 Costing expensive\nThe London Curry House - The Royale Senate Hotel, in 19/3, Kumara Krupa Road, Race Course Road, Bangalore has been rated 4.5 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "The Hole In The Wall Cafe, in 4, 8th Main Road, Koramangala 4th Block, Bangalore has been rated 4.4 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: goa
+  - slot_was_set:
+    - location: goa
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "The Black Sheep Bistro, in Near Fab India, Village Braganza Pereira Campal, Panaji, Goa has been rated 4.9 Costing expensive\nBurger Factory, in Anjuna Main Road, Opposite Paradise Guest House, Anjuna, Goa has been rated 4.8 Costing expensive\nPousada By The Beach, in Holiday Street, Gauravaddo, Near Calangute, Goa has been rated 4.8 Costing expensive\nThe Lazy Goose, in Near Nerul Bridge, Nerul Road, Nerul, Goa has been rated 4.7 Costing expensive\nGunpowder, in Anjuna Mapusa Road, Assagao, Goa has been rated 4.7 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+
+- story: interactive_story_2
+  steps:
+  - intent: restaurant_search
+    entities:
+    - location: gilli
+  - slot_was_set:
+    - location: gilli
+  - action: action_validate_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - price: null
+  - slot_was_set:
+    - email_sub: null
+  - slot_was_set:
+    - email_body: null
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: vellore
+  - slot_was_set:
+    - location: vellore
+  - action: action_validate_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - price: null
+  - slot_was_set:
+    - email_sub: null
+  - slot_was_set:
+    - email_body: null
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: North Indian
+  - slot_was_set:
+    - cuisine: North Indian
+  - action: utter_ask_price
+  - intent: greet
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "The Hole In The Wall Cafe, in 4, 8th Main Road, Koramangala 4th Block, Bangalore has been rated 4.4 Costing mid\n"
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_emailid
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: goa
+  - slot_was_set:
+    - location: goa
+  - action: action_validate_location
+  - slot_was_set:
+    - check_loc: 'True'
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: expensive
+  - slot_was_set:
+    - price: expensive
+  - action: action_search_restaurants
+  - slot_was_set:
+    - email_sub: Foodie App Search Results for you
+  - slot_was_set:
+    - email_body: "The Black Sheep Bistro, in Near Fab India, Village Braganza Pereira Campal, Panaji, Goa has been rated 4.9 Costing expensive\nBurger Factory, in Anjuna Main Road, Opposite Paradise Guest House, Anjuna, Goa has been rated 4.8 Costing expensive\nPousada By The Beach, in Holiday Street, Gauravaddo, Near Calangute, Goa has been rated 4.8 Costing expensive\nThe Lazy Goose, in Near Nerul Bridge, Nerul Road, Nerul, Goa has been rated 4.7 Costing expensive\nGunpowder, in Anjuna Mapusa Road, Assagao, Goa has been rated 4.7 Costing expensive\n"
+  - action: utter_ask_if_email_needed
+  - intent: affirm
+    entities:
+    - ask_if_email_needed: yes
+  - slot_was_set:
+    - ask_if_email_needed: yes
+  - action: utter_ask_emailid
+  - intent: ask_if_email_needed
+    entities:
+    - email_id: naveen.polamreddi@gmail.com
+  - slot_was_set:
+    - email_id: naveen.polamreddi@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
